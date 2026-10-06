@@ -1,0 +1,291 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family:
+      Inter,
+      ui-sans-serif,
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      sans-serif;
+    background: #f5f2ea;
+    color: #171717;
+  }
+  
+  button {
+    font: inherit;
+  }
+  
+  .app {
+    max-width: 430px;
+    margin: 0 auto;
+    padding: 28px 18px 44px;
+    text-align: center;
+  }
+  
+  .landing-screen,
+  .results-screen {
+    padding-top: 72px;
+  }
+  
+  .eyebrow {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    color: #6f6a62;
+  }
+  
+  h1 {
+    margin: 10px 0 8px;
+    font-size: 3rem;
+    line-height: 1;
+    letter-spacing: -0.04em;
+  }
+  
+  h2 {
+    margin: 28px 0 20px;
+    font-size: 1.7rem;
+    letter-spacing: -0.025em;
+  }
+  
+  .hero-copy {
+    margin: 16px 0 6px;
+    font-size: 1.5rem;
+    font-weight: 750;
+  }
+  
+  .sub-copy {
+    margin: 0;
+    color: #74706a;
+  }
+  
+  .primary-button {
+    width: 100%;
+    margin-top: 28px;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 14px;
+    background: #171717;
+    color: white;
+    font-weight: 800;
+    cursor: pointer;
+  }
+  
+  .top-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .question-count {
+    font-weight: 700;
+    color: #77716a;
+  }
+  
+  .progress-bar {
+    height: 6px;
+    margin-top: 12px;
+    overflow: hidden;
+    border-radius: 999px;
+    background: #ddd8ce;
+  }
+  
+  .progress-fill {
+    height: 100%;
+    border-radius: inherit;
+    background: #171717;
+    transition: width 180ms ease;
+  }
+  
+  .comparison {
+    display: grid;
+    gap: 12px;
+  }
+  
+  .product-choice {
+    width: 100%;
+    min-height: 122px;
+    padding: 20px;
+    border: 2px solid #d2ccc1;
+    border-radius: 18px;
+    background: white;
+    color: #171717;
+    text-align: left;
+    cursor: pointer;
+    transition:
+      transform 120ms ease,
+      border-color 120ms ease,
+      background 120ms ease;
+  }
+  
+  .product-choice:active:not(:disabled) {
+    transform: scale(0.985);
+  }
+  
+  .product-choice strong {
+    display: block;
+    font-size: 1.12rem;
+    line-height: 1.25;
+  }
+  
+  .product-choice span {
+    display: block;
+    margin-top: 7px;
+    color: #706b63;
+  }
+  
+  .product-choice .price {
+    margin-top: 14px;
+    color: #171717;
+    font-size: 1.35rem;
+    font-weight: 850;
+  }
+  
+  .product-choice.correct {
+    border-color: #278347;
+    background: #edf7ef;
+  }
+  
+  .product-choice.wrong {
+    border-color: #bd4b45;
+    background: #faeeee;
+  }
+  
+  .product-choice.muted {
+    opacity: 0.62;
+  }
+  
+  .product-choice:disabled {
+    cursor: default;
+  }
+  
+  .versus {
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    color: #8b857d;
+  }
+  
+  .reveal {
+    margin-top: 24px;
+    padding-top: 22px;
+    border-top: 1px solid #d9d3ca;
+  }
+  
+  .feedback {
+    font-size: 1.45rem;
+    font-weight: 900;
+  }
+  
+  .correct-text {
+    color: #24733e;
+  }
+  
+  .wrong-text {
+    color: #a43a36;
+  }
+  
+  .reveal p {
+    margin: 8px 0 0;
+    color: #706b63;
+  }
+  
+  .result-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 26px 0;
+  }
+  
+  .result-dot {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+  }
+  
+  .correct-dot {
+    background: #278347;
+  }
+  
+  .wrong-dot {
+    background: #bd4b45;
+  }
+  
+  .result-summary {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 750;
+  }
+
+  .result-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin: 28px 0 22px;
+  }
+  
+  .result-tile {
+    display: grid;
+    place-items: center;
+    aspect-ratio: 1;
+    border-radius: 12px;
+    font-size: 1.3rem;
+    font-weight: 900;
+  }
+  
+  .correct-tile {
+    background: #278347;
+    color: white;
+  }
+  
+  .wrong-tile {
+    background: #bd4b45;
+    color: white;
+  }
+  
+  .result-actions {
+    display: grid;
+    gap: 10px;
+    margin-top: 26px;
+  }
+  
+  .secondary-button {
+    width: 100%;
+    padding: 14px 20px;
+    border: 2px solid #171717;
+    border-radius: 14px;
+    background: transparent;
+    color: #171717;
+    font-weight: 800;
+    cursor: pointer;
+  }
+  
+  .share-status {
+    margin-top: 14px;
+    color: #706b63;
+    font-size: 0.9rem;
+  }
+  
+  .share-preview {
+    display: grid;
+    gap: 6px;
+    margin-top: 30px;
+    padding: 18px;
+    border-radius: 16px;
+    background: white;
+    border: 1px solid #d8d1c7;
+    text-align: left;
+  }
+  
+  .share-preview-label {
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    color: #8b857d;
+    text-transform: uppercase;
+  }
